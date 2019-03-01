@@ -2,7 +2,7 @@ var express = require("express");
 var router = require("./controllers/burgers_controller.js");
 var exphbs = require("express-handlebars");
 
-var PORT = process.env.JAWSDB_URL || 8080;
+var PORT = process.env.PORT || 8080;
 
 var app = express();
 
