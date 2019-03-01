@@ -2,8 +2,7 @@ var express = require("express");
 var router = require("./controllers/burgers_controller.js");
 var exphbs = require("express-handlebars");
 
-var PORT = process.env.PORT || 8080;
-
+var connection = mysql.createConnection(process.env.JAWSDB_URL);
 var app = express();
 
 // Serve static content for the app from the "public" directory in the application directory.
@@ -23,4 +22,4 @@ app.set("view engine", "handlebars");
 app.use(router);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(process.env.JAWSDB_URL);
+app.listen(connection);
